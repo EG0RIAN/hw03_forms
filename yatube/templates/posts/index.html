@@ -2,9 +2,7 @@
 {% block title %}
   Последние обновления на сайте
 {% endblock %}
-{% block content %}
-
-<div class="container py-5">     
+{% block content %} 
   <h1>
     Последние обновления на сайте
   </h1>
@@ -26,7 +24,7 @@
   </article>
   {% if not forloop.last %}<hr>{% endif %}
   {% endfor %}
-  {% include 'posts/includes/paginator.html' %}
+  {% include 'includes/paginator.html' %}
 </div> 
 
 {% endblock %}

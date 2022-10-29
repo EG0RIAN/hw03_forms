@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% block title %}
-Новый пост
+  {% if is_edit %}
+    Редактировать пост
+  {% else %}
+    Новый пост
+  {% endif %}
 {% endblock %}
 {% block content %}
 {% load user_filters %}
@@ -12,7 +16,7 @@
                   Редактировать пост
                 {% else %}
                   Новый пост
-                {% endif %}             
+                {% endif %}     
               </div>
               <div class="card-body">     
                 <form method="post" action="">
